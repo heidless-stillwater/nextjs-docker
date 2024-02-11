@@ -44,6 +44,12 @@ This will build the project as a standalone app inside the Docker image.
 1. Build your container image using Cloud Build: `gcloud builds submit --tag gcr.io/PROJECT-ID/helloworld --project PROJECT-ID`. This will also enable Cloud Build for your project.
 1. Deploy to Cloud Run: `gcloud run deploy --image gcr.io/PROJECT-ID/helloworld --project PROJECT-ID --platform managed --allow-unauthenticated`. Choose a region of your choice.
 
+```
+gcloud builds submit --tag gcr.io/heidless-todo-deploy-2/helloworld --project heidless-todo-deploy-2
+-
+gcloud run deploy --image gcr.io/heidless-todo-deploy-2/helloworld --project heidless-todo-deploy-2 --platform managed --allow-unauthenticated
+```
+
    - You will be prompted for the service name: press Enter to accept the default name, `helloworld`.
    - You will be prompted for [region](https://cloud.google.com/run/docs/quickstarts/build-and-deploy#follow-cloud-run): select the region of your choice, for example `us-central1`.
 
